@@ -1,0 +1,3 @@
+clear-message: "Chat cleared by {PLAYER}"
+clear-message-player: "You cleared the chat!"
+no-permission: "You don't have permission to perform this command! (xchat.clear)"
