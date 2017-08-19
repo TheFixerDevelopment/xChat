@@ -3,12 +3,16 @@ Clear chat easily!
 
 # Commands
 /cc - Clear chat
+
 /clearchat - Clear chat
+
 /chatclear - Clear chat
+
 /xchat - Info about plugin
 
 # Permissions
 xchat.clear - Permission to use cc, clearchat and chatclear commands.
+
 xchat.xchat - Permission to use xchat command.
 
 # TO-DO
