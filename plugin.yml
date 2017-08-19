@@ -1,0 +1,16 @@
+name: xChatClear
+author: Rysieeku
+version: 1.0
+main: Rysieeku\Main
+api: [3.0.0-ALPHA6]
+commands:
+  chatclear:
+    description: Clear chat
+    aliases: [cc, clearchat]
+  xchat:
+    description: Info about plugin
+permissions:
+  xchat.clear:
+    default: false
+  xchat.xchat:
+    default: false
