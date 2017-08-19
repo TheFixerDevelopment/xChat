@@ -1,0 +1,2 @@
+# xChatClear
+Clear chat easily!
