@@ -1,16 +1,24 @@
-name: xChatClear
+name: xChat
 author: Rysieeku
-version: 1.0
+version: 1.1
 main: Rysieeku\Main
 api: [3.0.0-ALPHA6]
 commands:
-  chatclear:
-    description: Clear chat
-    aliases: [cc, clearchat]
   xchat:
-    description: Info about plugin
+    description: Main plugin command.
+    aliases: [c, chat]
 permissions:
-  xchat.clear:
+  xchat.chat.clear:
     default: false
-  xchat.xchat:
+  xchat.cmd.info:
+    default: false
+  xchat.cmd.help:
+    default: false
+  xchat.chat.enable:
+    default: false
+  xchat.chat.disable:
+    default: false
+  xchat.reload:
+    default: false
+  xchat.*:
     default: false
