@@ -1,25 +1,27 @@
-# xChatClear
-Clear chat easily!
+# xChat
+Manage chat easily!
 
 # Commands
-/cc - Clear chat
-
-/clearchat - Clear chat
-
-/chatclear - Clear chat
-
-/xchat - Info about plugin
+/chat help - Available commnds
+/chat info - Informations about plugin
+/chat reload - Reload config file
+/chat clear - Clear chat
+/chat enable - Enable chat
+/chat disable - Disable chat
 
 # Permissions
-xchat.clear - Permission to use cc, clearchat and chatclear commands.
-
-xchat.xchat - Permission to use xchat command.
+xchat.cmd.info - Use /chat info command
+xchat.cmd.help - Use /chat help command
+xchat.reload - Use /chat reload command
+xchat.chat.clear - Use /chat clear command
+xchat.chat.enable - Use /chat enable command
+xchat.chat.disable - Use /chat disable command
+xchat.* - Use every command
 
 # TO-DO
-- Command to toggle chat off/on
-- Better performance
-- Console can use commands
-- (Maybe??) Change plugin name when more functions
+- Change color of messages by &
+- Eliminate known bugs
+- More functions
 
 # Download
-Currently no because there are no stable version of plugin!
+Coming soon.
