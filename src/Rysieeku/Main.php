@@ -65,12 +65,12 @@ class Main extends PluginBase implements Listener{
           if(strtolower($args[0]) == "clear"){
             if($sender->hasPermission("xchat.chat.clear") || $sender->hasPermission("xchat.*") || $sender->isOp()){
               $this->getServer()->broadcastMessage("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-              $this->getServer()->broadcastMessage(TF::GREEN."".$msg."");
-              $sender->sendMessage(TF::GREEN."".$pmsg."");
+              $this->getServer()->broadcastMessage(TF::GREEN.$msg);
+              $sender->sendMessage(TF::GREEN.$pmsg);
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED."".$np."");
+              $sender->sendMessage(TF::RED.$np);
               return true;
             }
           }
@@ -83,7 +83,7 @@ class Main extends PluginBase implements Listener{
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED."".$np."");
+              $sender->sendMessage(TF::RED.$np);
               return true;
             }
           }
@@ -100,7 +100,7 @@ class Main extends PluginBase implements Listener{
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED."".$np."");
+              $sender->sendMessage(TF::RED.$np);
               return true;
             }
           }
@@ -108,12 +108,12 @@ class Main extends PluginBase implements Listener{
             if($sender->hasPermission("xchat.chat.enable") || $sender->hasPermission("xchat.*") || $sender->isOp()){
               $this->getConfig()->set("chat","enabled");
               $this->getConfig()->save();
-              $sender->sendMessage(TF::GREEN."".$ecmsg."");
-              $this->getServer()->broadcastMessage(TF::GRAY."".$ecbc."");
+              $sender->sendMessage(TF::GREEN.$ecmsg);
+              $this->getServer()->broadcastMessage(TF::GRAY.$ecbc);
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED."".$np."");
+              $sender->sendMessage(TF::RED.$np);
               return true;
             }
           }
@@ -121,23 +121,23 @@ class Main extends PluginBase implements Listener{
             if($sender->hasPermission("xchat.chat.disable") || $sender->hasPermission("xchat.*") || $sender->isOp()){
               $this->getConfig()->set("chat","disabled");
               $this->getConfig()->save();
-              $sender->sendMessage(TF::GREEN."".$dcmsg."");
-              $this->getServer()->broadcastMessage(TF::GRAY."".$dcbc."");
+              $sender->sendMessage(TF::GREEN.$dcmsg);
+              $this->getServer()->broadcastMessage(TF::GRAY.$dcbc);
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED."".$np."");
+              $sender->sendMessage(TF::RED.$np);
               return true;
             }
           }
           elseif(strtolower($args[0]) == "reload"){
             if($sender->hasPermission("xchat.reload") || $sender->hasPermission("xchat.*") || $sender->isOp()){
               $this->reloadConfig();
-              $sender->sendMessage(TF::GREEN."Configuration file has been reloaded!");
+              $sender->sendMessage(TF::GREEN."[xChat] Configuration file has been reloaded!");
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED."".$np."");
+              $sender->sendMessage(TF::RED.$np);
               return true;
              }
            }
@@ -148,7 +148,7 @@ class Main extends PluginBase implements Listener{
     $player = $event->getPlayer();
     if($this->getConfig()->getAll()["chat"] == "disabled"){
       $event->setCancelled(true);
-      $player->sendMessage(TF::RED."".$pdcmsg."");
+      $player->sendMessage(TF::RED.$pdcmsg);
       return true;
     }
     else {
