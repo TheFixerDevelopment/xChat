@@ -1,3 +1,12 @@
-clear-message: "Chat cleared by {PLAYER}"
-clear-message-player: "You cleared the chat!"
-no-permission: "You don't have permission to perform this command! (xchat.clear)"
+---
+version: 1.1
+chat: enabled
+clear-message: "Chat has been cleared by {PLAYER}"
+clear-message-player: "You have cleared the chat"
+enable-chat-message: "You have enabled the chat"
+enable-chat-broadcast: "Chat has been enabled by {PLAYER}"
+disable-chat-message: "You have disabled the chat"
+disable-chat-broadcast: "Chat has been disabled by {PLAYER}"
+chat-disabled-message: "You can't chat! Chat is disabled!"
+no-permission: "You don't have permission to perform this command!"
+...
