@@ -3,7 +3,7 @@ namespace Rysieeku\xChat;
 
 
 /*
-* xChat 1.3
+* xChat 1.3.1
 * Author: Rysieeku
 * API: 3.0.0-ALPHA6
 */
@@ -21,7 +21,33 @@ use pocketmine\event\player\PlayerChatEvent;
 class Main extends PluginBase implements Listener{
 
   public $cfg;
-
+  
+  public function betterColors($symbol, $message){
+    $message = str_replace($symbol."0", TF::BLACK, $message);
+    $message = str_replace($symbol."1", TF::DARK_BLUE, $message);
+    $message = str_replace($symbol."2", TF::DARK_GREEN, $message);
+    $message = str_replace($symbol."3", TF::DARK_AQUA, $message);
+    $message = str_replace($symbol."4", TF::DARK_RED, $message);
+    $message = str_replace($symbol."5", TF::DARK_PURPLE, $message);
+    $message = str_replace($symbol."6", TF::GOLD, $message);
+    $message = str_replace($symbol."7", TF::GRAY, $message);
+    $message = str_replace($symbol."8", TF::DARK_GRAY, $message);
+    $message = str_replace($symbol."9", TF::BLUE, $message);
+    $message = str_replace($symbol."a", TF::GREEN, $message);
+    $message = str_replace($symbol."b", TF::AQUA, $message);
+    $message = str_replace($symbol."c", TF::RED, $message);
+    $message = str_replace($symbol."d", TF::LIGHT_PURPLE, $message);
+    $message = str_replace($symbol."e", TF::YELLOW, $message);
+    $message = str_replace($symbol."f", TF::WHITE, $message);
+    $message = str_replace($symbol."k", TF::OBFUSCATED, $message);
+    $message = str_replace($symbol."l", TF::BOLD, $message);
+    $message = str_replace($symbol."m", TF::STRIKETHROUGH, $message);
+    $message = str_replace($symbol."n", TF::UNDERLINE, $message);
+    $message = str_replace($symbol."o", TF::ITALIC, $message);
+    $message = str_replace($symbol."r", TF::RESET, $message);
+    return $message;
+  }
+  
   public function onLoad(){
     $this->getLogger()->info(TF::YELLOW."Loading...");
   }
@@ -61,12 +87,12 @@ class Main extends PluginBase implements Listener{
               $msg = str_replace("{PLAYER}", $sender->getName(), $msg);
               $pmsg = $this->getConfig()->get("clear-message-player");
               $this->getServer()->broadcastMessage("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-              $this->getServer()->broadcastMessage(TF::GRAY.$msg);
-              $sender->sendMessage(TF::YELLOW.$pmsg);
+              $this->getServer()->broadcastMessage($this->betterColors("&", "&e".$msg));
+              $sender->sendMessage($this->betterColors("&", "&e".$pmsg));
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED.$np);
+              $sender->sendMessage($this->betterColors("&", "&c".$np));
               return true;
             }
           }
@@ -74,12 +100,12 @@ class Main extends PluginBase implements Listener{
             if($sender->hasPermission("xchat.info") || $sender->hasPermission("xchat.*") || $sender->isOp()){
               $sender->sendMessage(TF::GRAY."-=[ ".TF::GREEN."+".TF::GRAY." ] [ ".TF::YELLOW."Info".TF::GRAY." ] [ ".TF::GREEN."+".TF::GRAY." ]=-");
               $sender->sendMessage(TF::GRAY."Author -".TF::YELLOW." Rysieeku");
-              $sender->sendMessage(TF::GRAY."Version -".TF::YELLOW." 1.3");
+              $sender->sendMessage(TF::GRAY."Version -".TF::YELLOW." 1.3.1");
               $sender->sendMessage(TF::GRAY."E-mail -".TF::YELLOW." rysieeku@upblock.pl");
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED.$np);
+              $sender->sendMessage($this->betterColors("&", "&c".$np));
               return true;
             }
           }
@@ -98,7 +124,7 @@ class Main extends PluginBase implements Listener{
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED.$np);
+              $sender->sendMessage($this->betterColors("&", "&c".$np));
               return true;
             }
           }
@@ -109,12 +135,12 @@ class Main extends PluginBase implements Listener{
               $ecbc = str_replace("{PLAYER}", $sender->getName(), $ecbc);
               $this->getConfig()->set("chat","enabled");
               $this->getConfig()->save();
-              $sender->sendMessage(TF::YELLOW.$ecmsg);
-              $this->getServer()->broadcastMessage(TF::GRAY.$ecbc);
+              $sender->sendMessage($this->betterColors("&", "&e".$ecmsg));
+              $this->getServer()->broadcastMessage($this->betterColors("&", "&7".$ecbc));
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED.$np);
+              $sender->sendMessage($this->betterColors("&", "&c".$np));
               return true;
             }
           }
@@ -125,12 +151,12 @@ class Main extends PluginBase implements Listener{
               $dcbc = str_replace("{PLAYER}", $sender->getName(), $dcbc);
               $this->getConfig()->set("chat","disabled");
               $this->getConfig()->save();
-              $sender->sendMessage(TF::YELLOW.$dcmsg);
-              $this->getServer()->broadcastMessage(TF::GRAY.$dcbc);
+              $sender->sendMessage($this->betterColors("&", "&e".$dcmsg));
+              $this->getServer()->broadcastMessage($this->betterColors("&", "&7".$dcbc));
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED.$np);
+              $sender->sendMessage($this->betterColors("&", "&c".$np));
               return true;
             }
           }
@@ -141,7 +167,7 @@ class Main extends PluginBase implements Listener{
               return true;
             }
             else {
-              $sender->sendMessage(TF::RED.$np);
+              $sender->sendMessage($this->betterColors("&", "&c".$np));
               return true;
              }
            }
@@ -161,8 +187,8 @@ class Main extends PluginBase implements Listener{
                    $mpmsg = str_replace("{PLAYER}", $sender->getName(), $mpmsg);
                    $this->playersMuted->set(strtolower($args[1]));
                    $this->playersMuted->save();
-                   $sender->sendMessage(TF::YELLOW.$mmsg);
-                   $target->sendMessage(TF::YELLOW.$mpmsg);
+                   $sender->sendMessage($this->betterColors("&", "&e".$mmsg));
+                   $target->sendMessage($this->betterColors("&", "&7".$mpmsg));
                    return true;
                  }
                  else {
@@ -171,7 +197,7 @@ class Main extends PluginBase implements Listener{
                  }
              }
              else {
-               $sender->sendMessage(TF::RED.$np);
+               $sender->sendMessage($this->betterColors("&", "&c".$np));
                return true;
              }
            }
@@ -192,8 +218,8 @@ class Main extends PluginBase implements Listener{
                    $upmsg = str_replace("{PLAYER}", $sender->getName(), $upmsg);
                    $this->playersMuted->remove(strtolower($args[1]));
                    $this->playersMuted->save();
-                   $sender->sendMessage(TF::YELLOW.$umsg);
-                   $target->sendMessage(TF::YELLOW.$upmsg);
+                   $sender->sendMessage($this->betterColors("&", "&e".$umsg));
+                   $target->sendMessage($this->betterColors("&", "&7".$upmsg));
                    return true;
                  }
                  else {
@@ -202,7 +228,7 @@ class Main extends PluginBase implements Listener{
                  }
              }
              else {
-               $sender->sendMessage(TF::RED.$np);
+               $sender->sendMessage($this->betterColors("&", "&c".$np));
                return true;
              }
            }
@@ -221,17 +247,17 @@ class Main extends PluginBase implements Listener{
     $pmmsg = $this->getConfig()->get("muted-player-message");
     if($this->getConfig()->getAll()["chat"] == "disabled"){
       $event->setCancelled(true);
-      $player->sendMessage(TF::RED.$pdcmsg);
+      $player->sendMessage($this->betterColors("&", "&e".$pdcmsg));
       return true;
     }
     else {
       if($this->playersMuted->exists(strtolower($event->getPlayer()->getName()))){
         $event->setCancelled(true);
-        $player->sendMessage(TF::RED.$pmmsg);
+        $player->sendMessage($this->betterColors("&", "&c".$pmmsg));
         return true;
       }
       else {
-        return true;
+        return false;
       }
     }
   }
