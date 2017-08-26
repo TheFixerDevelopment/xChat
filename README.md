@@ -1,3 +1,5 @@
+![xChat](http://i.imgur.com/oeWKfn3.jpg "xChat")
+
 # xChat
 Manage chat easily!
 
