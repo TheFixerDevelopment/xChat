@@ -4,4 +4,5 @@ branches:
 projects:
   xChat:
     path: ""
+    icon: "logo.png/"
 ...
