@@ -60,9 +60,7 @@ PocketMine-MP 3.0.0-ALPHA6
 **xchat.*** - Use every command
 
 # TO-DO
-- Change color of messages in config using &
-
-- Eliminate known bugs
+- Eliminate bugs
 
 - More functions
 
