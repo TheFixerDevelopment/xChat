@@ -69,7 +69,8 @@ PocketMine-MP 3.0.0-ALPHA6
 - Mute players for specified time
 
 # Documentation
-**Variables**
+**Variables:**
+
 {PLAYER} - **Show player nickname**
 
 **Config file:**
