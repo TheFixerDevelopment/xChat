@@ -1,7 +1,7 @@
 name: xChat
 author: Rysieeku
 version: 1.3
-main: Rysieeku\Main
+main: Rysieeku\xChat\Main
 api: [3.0.0-ALPHA6]
 commands:
   xchat:
