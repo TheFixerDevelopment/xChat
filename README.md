@@ -78,21 +78,21 @@ PocketMine-MP 3.0.0-ALPHA6
 **Config file:**
 ```
 ---
-version: 1.3
+version: 1.3.1
 chat: enabled
-clear-message: "Chat has been cleared by {PLAYER}"
-clear-message-player: "You have cleared the chat"
-enable-chat-message: "You have enabled the chat"
-enable-chat-broadcast: "Chat has been enabled by {PLAYER}"
-disable-chat-message: "You have disabled the chat"
-disable-chat-broadcast: "Chat has been disabled by {PLAYER}"
-chat-disabled-message: "You can't chat! Chat is disabled!"
-mute-message: "{PLAYER} has been muted"
-player-mute-message: "You have been muted by {PLAYER}"
-unmute-message: "{PLAYER} has been unmuted"
-player-unmute-message: "You have been unmuted by {PLAYER}"
-muted-player-message: "You are muted!"
-no-permission: "You don't have permission to perform this command!"
+clear-message: "&7Chat has been cleared by &e&l{PLAYER}"
+clear-message-player: "&aYou have cleared the chat!"
+enable-chat-message: "&aYou have enabled the chat!"
+enable-chat-broadcast: "&7Chat has been enabled by &e&l{PLAYER}"
+disable-chat-message: "&aYou have disabled the chat!"
+disable-chat-broadcast: "&7Chat has been disabled by &e&l{PLAYER}"
+chat-disabled-message: "&cChat is disabled!"
+mute-message: "&e&l{PLAYER}&r&7 has been muted"
+player-mute-message: "&7You have been muted by &e&l{PLAYER}"
+unmute-message: "&e&l{PLAYER}&r&7 has been unmuted"
+player-unmute-message: "&7You have been unmuted by &e&l{PLAYER}"
+muted-player-message: "&cYou are muted!"
+no-permission: "&cYou don't have permission to perform this command!"
 ...
 ```
 
