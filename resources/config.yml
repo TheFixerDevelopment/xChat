@@ -1,6 +1,9 @@
 ---
-version: 1.3.1
+version: 1.4
 chat: enabled
+bad-words: message
+banned-word-message: "&cDo not use bad words!"
+banned-word-kick: "/n&cDo not use bad words!"
 clear-message: "&7Chat has been cleared by &e&l{PLAYER}"
 clear-message-player: "&aYou have cleared the chat!"
 enable-chat-message: "&aYou have enabled the chat!"
@@ -11,6 +14,7 @@ chat-disabled-message: "&cChat is disabled!"
 mute-message: "&e&l{PLAYER}&r&7 has been muted"
 player-mute-message: "&7You have been muted by &e&l{PLAYER}"
 unmute-message: "&e&l{PLAYER}&r&7 has been unmuted"
+unmute-all-message: "&7All players have been unmuted!"
 player-unmute-message: "&7You have been unmuted by &e&l{PLAYER}"
 muted-player-message: "&cYou are muted!"
 no-permission: "&cYou don't have permission to perform this command!"
