@@ -10,7 +10,7 @@ PocketMine-MP plugin
 PocketMine-MP 3.0.0-ALPHA6
 
 # Overview
-**xChat**  lets you manage chat in better way. Mute players, clear chat and more!
+**xChat**  lets you manage chat in a better way. Mute players, clear chat and more!
 
 **Working with older versions of PocketMine-MP is not guaranteed**
 
@@ -20,9 +20,10 @@ PocketMine-MP 3.0.0-ALPHA6
 - Mute/unmute players.
 - Enable/disable chat.
 - Clear chat.
+- Block words.
 
 # Commands
-**/chat help** - Available commnds
+**/chat help [1/2]** - Available commnds
 
 **/chat info** - Informations about plugin
 
@@ -38,46 +39,73 @@ PocketMine-MP 3.0.0-ALPHA6
 
 **/chat unmute [player]** - Unmute player
 
+**/chat unmuteall** - Unmute all muted players
+
+**/chat muted** - Check list of muted players
+
+**/chat add [word]** - Add word to list of banned words
+
+**/chat remove [word]** - Remove word from list of banned words
+
+**/chat words** - Check list of banned words
+
 **Command aliases:** [c, xchat]
 
 # Permissions
-**xchat.info** - Use /chat info command
+**xchat.*** - Allow to do everything
 
-**xchat.help** - Use /chat help command
+**xchat.info** - Allow to check informations about plugin
 
-**xchat.reload** - Use /chat reload command
+**xchat.help** - Allow to check plugin help page
 
-**xchat.clear** - Use /chat clear command
+**xchat.reload** - Allow to reload plugin configuration file
 
-**xchat.enable** - Use /chat enable command
+**xchat.clear** - Allow to clear chat
 
-**xchat.disable** - Use /chat disable command
+**xchat.enable** - Allow to enable chat
 
-**xchat.mute** - Use /chat mute command
+**xchat.disable** - Allow to disable chat
 
-**xchat.unmute** - Use /chat unmute command
+**xchat.mute** - Allow to mute specified player
 
-**xchat.*** - Use every command
+**xchat.unmute** - Allow to umnute specified player
+
+**xchat.unmuteall** - Allow to ummute all players
+
+**xchat.muted** - Allow to check list of muted players
+
+**xchat.add** - Allow to add word to list of banned words
+
+**xchat.remove** - Allow to remove word from list of banned words
+
+**xchat.words** - Allow to check list of banned words
+
 
 # TO-DO
 - Eliminate bugs
 
-- More functions
+- More features
 
-- Improve mute
 
 - Mute players for specified time
+
+- Improve code
 
 # Documentation
 **Variables:**
 
 {PLAYER} - **Show player nickname**
 
+**bad-words: Use "kick" to kick player after detecting of bad words or "message" to warn player with message. (Without quotes)**
+
 **Config file:**
 ```
 ---
-version: 1.3.1
+version: 1.4
 chat: enabled
+bad-words: message
+banned-word-message: "&cDo not use bad words!"
+banned-word-kick: "/n&cDo not use bad words!"
 clear-message: "&7Chat has been cleared by &e&l{PLAYER}"
 clear-message-player: "&aYou have cleared the chat!"
 enable-chat-message: "&aYou have enabled the chat!"
@@ -88,6 +116,7 @@ chat-disabled-message: "&cChat is disabled!"
 mute-message: "&e&l{PLAYER}&r&7 has been muted"
 player-mute-message: "&7You have been muted by &e&l{PLAYER}"
 unmute-message: "&e&l{PLAYER}&r&7 has been unmuted"
+unmute-all-message: "&7All players have been unmuted!"
 player-unmute-message: "&7You have been unmuted by &e&l{PLAYER}"
 muted-player-message: "&cYou are muted!"
 no-permission: "&cYou don't have permission to perform this command!"
