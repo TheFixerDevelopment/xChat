@@ -4,7 +4,7 @@ namespace Rysieeku\xChat;
 /*
 * xChat 1.4
 * Author: Rysieeku
-* API: 3.0.0-ALPHA6
+* API: 3.0.0-ALPHA7
 */
 
 use pocketmine\command\Command;
@@ -57,7 +57,7 @@ class Main extends PluginBase implements Listener{
     $this->getLogger()->info(TF::BOLD.TF::GREEN."xChat".TF::RESET.TF::GREEN." by Rysieeku has been loaded!");
   }
   
-  public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+  public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
     $np = $this->getConfig()->get("no-permission");
     switch(strtolower($command->getName())){
       case "xchat":
