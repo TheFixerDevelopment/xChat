@@ -7,7 +7,7 @@ Manage chat easily!
 PocketMine-MP plugin
 
 # Requirements
-PocketMine-MP 3.0.0-ALPHA6
+PocketMine-MP 3.0.0-ALPHA7
 
 # Overview
 **xChat**  lets you manage chat in a better way. Mute players, clear chat and more!
