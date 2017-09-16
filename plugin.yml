@@ -1,6 +1,6 @@
 name: xChat
 author: Rysieeku
-version: 1.4
+version: 1.5
 main: Rysieeku\xChat\Main
 api: [3.0.0-ALPHA6]
 commands:
@@ -24,6 +24,9 @@ permissions:
       xchat.mute:
         default: op
         description: Allow to mute player
+      xchat.timemute:
+        default: op
+        descriptiom: Allow to time mute player
       xchat.unmute:
         default: op
         description: Allow to unmute player
