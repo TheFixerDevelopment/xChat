@@ -10,7 +10,7 @@ PocketMine-MP plugin
 PocketMine-MP 3.0.0-ALPHA6
 
 # Overview
-**xChat**  lets you manage chat in a better way. Mute players, clear chat and more!
+**xChat**  lets you manage chat in a better way. Mute players, clear chat and more!
 
 **Working with older versions of PocketMine-MP is not guaranteed**
 
@@ -18,6 +18,7 @@ PocketMine-MP 3.0.0-ALPHA6
 
 **Features**
 - Mute/unmute players.
+- Time mute players.
 - Enable/disable chat.
 - Clear chat.
 - Block words.
@@ -36,6 +37,8 @@ PocketMine-MP 3.0.0-ALPHA6
 **/chat disable** - Disable chat
 
 **/chat mute [player]** - Mute player
+
+**/chat timemute [player] [time]** - Time mute player
 
 **/chat unmute [player]** - Unmute player
 
@@ -68,6 +71,8 @@ PocketMine-MP 3.0.0-ALPHA6
 
 **xchat.mute** - Allow to mute specified player
 
+**xchat.timemute** - Allow to time mute players
+
 **xchat.unmute** - Allow to umnute specified player
 
 **xchat.unmuteall** - Allow to ummute all players
@@ -80,14 +85,10 @@ PocketMine-MP 3.0.0-ALPHA6
 
 **xchat.words** - Allow to check list of banned words
 
+**xchat.***- Allow to do everything
 
 # TO-DO
 - Eliminate bugs
-
-- More features
-
-
-- Mute players for specified time
 
 - Improve code
 
@@ -95,33 +96,70 @@ PocketMine-MP 3.0.0-ALPHA6
 **Variables:**
 
 {PLAYER} - **Show player nickname**
+{TIME} - **Show for how many minutes player has been muted**
 
 **bad-words: Use "kick" to kick player after detecting of bad words or "message" to warn player with message. (Without quotes)**
 
 **Config file:**
 ```
 ---
-version: 1.4
+version: 1.5
 chat: enabled
 bad-words: message
-banned-word-message: "&cDo not use bad words!"
-banned-word-kick: "/n&cDo not use bad words!"
-clear-message: "&7Chat has been cleared by &e&l{PLAYER}"
-clear-message-player: "&aYou have cleared the chat!"
-enable-chat-message: "&aYou have enabled the chat!"
-enable-chat-broadcast: "&7Chat has been enabled by &e&l{PLAYER}"
-disable-chat-message: "&aYou have disabled the chat!"
-disable-chat-broadcast: "&7Chat has been disabled by &e&l{PLAYER}"
-chat-disabled-message: "&cChat is disabled!"
-mute-message: "&e&l{PLAYER}&r&7 has been muted"
-player-mute-message: "&7You have been muted by &e&l{PLAYER}"
-unmute-message: "&e&l{PLAYER}&r&7 has been unmuted"
-unmute-all-message: "&7All players have been unmuted!"
-player-unmute-message: "&7You have been unmuted by &e&l{PLAYER}"
-muted-player-message: "&cYou are muted!"
-no-permission: "&cYou don't have permission to perform this command!"
+datetime-format: "Y/m/d H:i:s"
 ...
 ```
 
+**Language file:**
+```
+#####################################################################
+# Configure your messages in this file!                             #
+# Available variables:                                              #
+# - {PLAYER} - Display player nickname                              #
+# - {TIME} - Display for how many minutes player has been muted     #
+# - {HOUR} - Display current hour                                   #
+# You can use colors by adding & before message. Example: &6hi!     #
+#####################################################################
+
+banned-word-message: "&cPlease do not use bad words!"
+
+banned-word-kick: "/nYou are kicked!/n&cPlease do not use bad words!"
+
+clear-broadcast: "&7Chat has been cleared by &e&l{PLAYER}"
+
+clear-message-player: "&aYou have cleared the chat!"
+
+enable-chat-message: "&aYou have enabled the chat!"
+
+enable-chat-broadcast: "&7Chat has been enabled by &e&l{PLAYER}"
+
+disable-chat-message: "&aYou have disabled the chat!"
+
+disable-chat-broadcast: "&7Chat has been disabled by &e&l{PLAYER}"
+
+chat-disabled: "&cChat is disabled!"
+
+mute-message: "&e&l{PLAYER}&r&7 has been muted"
+
+time-mute-message: "&e&l{PLAYER}&r&7 has been muted for &e&l{TIME}&r&7 minutes"
+
+player-mute-message: "&7You have been muted by &e&l{PLAYER}"
+
+player-time-mute: "&7You have been muted by &e&l{PLAYER}&r&7 for &e&l{TIME}&r&7 minutes"
+
+unmute-message: "&e&l{PLAYER}&r&7 has been unmuted"
+
+player-unmute-message: "&7You have been unmuted by &e&l{PLAYER}"
+
+time-unmute-message: "&7Your mute has expired!"
+
+unmute-all-message: "&7All players have been unmuted!"
+
+player-muted: "&cYou can not use chat because you are muted!"
+
+no-permission: "&cYou don't have permission to perform this command!"
+```
+
 # Download
-[Here ya go](https://github.com/Rysieku/xChat/releases)
+**3.0.0-ALPHA6** - [CLICK](https://github.com/Rysieku/xChat/releases/tag/1.5alpha6)
+**3.0.0-ALPHA7** - [CLICK](https://github.com/Rysieku/xChat/releases/tag/1.5alpha7)
