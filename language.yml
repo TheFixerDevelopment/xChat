@@ -1,0 +1,46 @@
+#####################################################################
+# Configure your messages in this file!                             #
+# Available variables:                                              #
+# - {PLAYER} - Display player nickname                              #
+# - {TIME} - Display for how many minutes player has been muted     #
+# - {HOUR} - Display current hour                                   #
+# You can use colors by adding & before message. Example: &6hi!     #
+#####################################################################
+
+banned-word-message: "&cPlease do not use bad words!"
+
+banned-word-kick: "/nYou are kicked!/n&cPlease do not use bad words!"
+
+clear-broadcast: "&7Chat has been cleared by &e&l{PLAYER}"
+
+clear-message-player: "&aYou have cleared the chat!"
+
+enable-chat-message: "&aYou have enabled the chat!"
+
+enable-chat-broadcast: "&7Chat has been enabled by &e&l{PLAYER}"
+
+disable-chat-message: "&aYou have disabled the chat!"
+
+disable-chat-broadcast: "&7Chat has been disabled by &e&l{PLAYER}"
+
+chat-disabled: "&cChat is disabled!"
+
+mute-message: "&e&l{PLAYER}&r&7 has been muted"
+
+time-mute-message: "&e&l{PLAYER}&r&7 has been muted for &e&l{TIME}&r&7 minutes"
+
+player-mute-message: "&7You have been muted by &e&l{PLAYER}"
+
+player-time-mute: "&7You have been muted by &e&l{PLAYER}&r&7 for &e&l{TIME}&r&7 minutes"
+
+unmute-message: "&e&l{PLAYER}&r&7 has been unmuted"
+
+player-unmute-message: "&7You have been unmuted by &e&l{PLAYER}"
+
+time-unmute-message: "&7Your mute has expired!"
+
+unmute-all-message: "&7All players have been unmuted!"
+
+player-muted: "&cYou can not use chat because you are muted!"
+
+no-permission: "&cYou don't have permission to perform this command!"
