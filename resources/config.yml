@@ -1,21 +1,6 @@
 ---
-version: 1.4
+version: 1.5
 chat: enabled
 bad-words: message
-banned-word-message: "&cDo not use bad words!"
-banned-word-kick: "/n&cDo not use bad words!"
-clear-message: "&7Chat has been cleared by &e&l{PLAYER}"
-clear-message-player: "&aYou have cleared the chat!"
-enable-chat-message: "&aYou have enabled the chat!"
-enable-chat-broadcast: "&7Chat has been enabled by &e&l{PLAYER}"
-disable-chat-message: "&aYou have disabled the chat!"
-disable-chat-broadcast: "&7Chat has been disabled by &e&l{PLAYER}"
-chat-disabled-message: "&cChat is disabled!"
-mute-message: "&e&l{PLAYER}&r&7 has been muted"
-player-mute-message: "&7You have been muted by &e&l{PLAYER}"
-unmute-message: "&e&l{PLAYER}&r&7 has been unmuted"
-unmute-all-message: "&7All players have been unmuted!"
-player-unmute-message: "&7You have been unmuted by &e&l{PLAYER}"
-muted-player-message: "&cYou are muted!"
-no-permission: "&cYou don't have permission to perform this command!"
+datetime-format: "Y/m/d H:i:s"
 ...
